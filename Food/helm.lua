@@ -1,5 +1,5 @@
 local name = "helm"
-local version = "3.7.1"
+local version = "3.7.0"
 
 food = {
     name = name,
@@ -16,6 +16,19 @@ food = {
             resources = {
                 {
                     path = "darwin-amd64/" .. name,
+                    installpath = "bin/" .. name,
+                    executable = true
+                }
+            }
+        },
+        {
+            os = "darwin",
+            arch = "arm64",
+            url = "https://get.helm.sh/helm-v" .. version .. "-darwin-arm64.tar.gz",
+            sha256 = "3a9efe337c61a61b3e160da919ac7af8cded8945b75706e401f3655a89d53ef5",
+            resources = {
+                {
+                    path = "darwin-arm64/" .. name,
                     installpath = "bin/" .. name,
                     executable = true
                 }
